@@ -1,0 +1,40 @@
+{% extends 'main.html' %}
+
+
+{% block title %}Cadastro{% endblock %}
+
+{% block content %}
+	<div class="container">
+		<div class="card">
+			<div class="card-header">
+				Cadastrar
+			</div>
+			<div class="card-body">
+				<form method="POST">
+				  {% csrf_token %}
+				  <div class="form-group form-cad">
+				    <label for="exampleInputEmail1">Endereço de email</label>
+				    <input value="{{email}}" required name="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Seu email">
+				  </div>
+				  <div class="form-group form-cad">
+				  <label for="formGroupExampleInput">Username</label>
+				      <input value="{{nome}}" required name="user" type="text" class="form-control" id="formGroupExampleInput" placeholder="username">
+				    </div>
+				    <div class="form-group form-cad">
+				      <label for="formGroupExampleInput2">Nome</label>
+				      <input value="{{apelido}}" required name="apelido" type="text" class="form-control" id="formGroupExampleInput2" placeholder="nome">
+				    </div>
+				  <div class="form-group form-cad">
+				    <label for="exampleInputPassword1">Senha</label>
+				    <input value="{{senha}}" required name="senha" type="password" class="form-control" id="exampleInputPassword1" placeholder="Senha">
+				  </div>
+				  <button type="submit" class="btn btn-primary botao-cad">Enviar</button>
+				  <a class="btn btn-outline-success" style="margin-top:6.5px;"  href="{% url 'login'%}">Login</a>
+				</form>
+			</div>
+			<div class="card-footer text-muted">
+				Powered by MzTech
+			</div>
+		</div>
+	</div>
+{% endblock %}

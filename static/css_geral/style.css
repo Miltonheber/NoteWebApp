@@ -1,0 +1,51 @@
+body {
+	font-family:'lato','sans-serif';
+	margin:0px;
+	height:100vh;
+	display:flex;
+	flex-direction:column;
+	justify-content:space-between;
+	
+}
+
+footer p {
+	color:white;
+	align-text:center;
+	text-align:center;
+}
+
+#menu {
+	padding-left:10px;
+	margin-bottom:25px;
+	
+}
+
+#rodape {
+	margin-top:25px;
+	height:18vh;
+	display:flex;
+	flex-direction:column;
+	justify-content:center;
+	row-gap:8px;
+	
+}
+
+#texto-rodape {
+	color:white;
+}
+
+.botao-cad {
+	margin-top:8px;
+	margin-bottom:2px;
+}
+.form-cad {
+	margin-bottom:8px;
+}
+.rodape-icons {
+	display:flex;
+	flex-direction:row;
+	justify-content:space-around;
+	column-gap:45px;
+	align-items:center;
+	
+}

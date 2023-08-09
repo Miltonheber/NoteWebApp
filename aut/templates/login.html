@@ -1,0 +1,32 @@
+{% extends 'main.html' %}
+
+{% block title %}Login{% endblock %}
+
+
+{% block content %}
+	<div class="container">
+		<div class="card">
+			<div class="card-header">
+				Login
+			</div>
+			<div class="card-body">
+				<form method="POST">
+				{% csrf_token %}
+					<div class="form-group form-cad">
+					    <label for="formGroupExampleInput">Username</label>
+					    <input name="username" required value="{{username}}" type="text" class="form-control" id="formGroupExampleInput" placeholder="username">
+					  </div>
+					<div class="form-group form-cad">
+					    <label for="exampleInputPassword1">Senha</label>
+					    <input name="senha" required value="{{senha}}" type="password" class="form-control" id="exampleInputPassword1" placeholder="Senha">
+					  </div>
+					  <button type="submit" class="btn btn-primary">Entrar</button>
+					  <a style="margin-top:1px;" href="{% url 'cadastrar' %}" class="btn btn-outline-success">Registar</a>
+				</form>
+			</div>
+			<div class="card-footer  text-muted">
+				Powered by MzTech
+			</div>
+		</div>
+	</div>
+{% endblock %}

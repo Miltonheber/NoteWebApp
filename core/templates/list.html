@@ -1,0 +1,11 @@
+{% extends 'main.html' %}
+
+
+{% block title %}Notas{% endblock %}
+
+{% block content %}
+
+	{% for nota in notas %}
+		<h1>{{nota.id}}-{{nota.titulo}}</h1>
+	{% endfor %}
+{% endblock %}
